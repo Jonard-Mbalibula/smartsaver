@@ -105,7 +105,7 @@ smartsaver/
 
 This project is open source and available under the MIT License.
 
-## 🆘 Support
+## 🆘 Support BY ME
 
 For issues and questions:
 1. Check the [DEPLOYMENT.md](DEPLOYMENT.md) guide
