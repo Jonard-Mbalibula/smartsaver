@@ -23,4 +23,7 @@
       "dest": "/frontend/$1"
     }
   ]
+  "env": {
+    "JWT_SECRET": "@jwt_secret"
+  }
 }
