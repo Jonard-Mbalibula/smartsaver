@@ -11,8 +11,25 @@ export default defineConfig({
         changeOrigin: true
       }
     }
+  },
+  // --- ADD THIS BLOCK ---
+  build: {
+    rollupOptions: {
+      output: {
+        // This function checks if a module comes from node_modules 
+        // and bundles it into a separate 'vendor' file.
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            // All node_modules dependencies go into vendor.js
+            return 'vendor';
+          }
+        }
+      }
+    }
   }
+  // -----------------------
 })
+<<<<<<< HEAD
 
 
 
@@ -26,3 +43,5 @@ export default defineConfig({
 
 
 
+=======
+>>>>>>> 5eca860140b2ab7daf5c1b7df825c3e9a8a57284
