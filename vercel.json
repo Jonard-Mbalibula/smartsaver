@@ -22,18 +22,7 @@
       "src": "/(.*)",
       "dest": "/index.html"
     }
-{
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
   ],
-  "env": {
-    "JWT_SECRET": "@jwt_secret"
-  }
-}  ]
-  ]
   "env": {
     "JWT_SECRET": "@jwt_secret"
   }
