@@ -17,6 +17,7 @@ export default function Login(){
       await auth.login(form.email, form.password)
       nav('/')
     }catch(err){
+      // This is the error handler that reports the failure
       toast.notify(err?.response?.data?.message || 'Login failed', 'error')
     }finally{
       setLoading(false)
@@ -24,8 +25,10 @@ export default function Login(){
   }
 
   return (
-    <div style={{display:'grid', placeItems:'center', minHeight:'80vh'}}>
-      <form className="card" onSubmit={onSubmit} style={{width:360, display:'flex', flexDirection:'column', gap:10}}>
+    // Replaced inline style with CSS class
+    <div className="auth-container">
+      {/* Replaced .card with the new CSS class */}
+      <form className="login-box" onSubmit={onSubmit}> 
         <h3>Sign in</h3>
         <input className="input" placeholder="Email" value={form.email} onChange={e=>setForm({...form, email:e.target.value})} required />
         <input className="input" type="password" placeholder="Password" value={form.password} onChange={e=>setForm({...form, password:e.target.value})} required />
@@ -34,13 +37,3 @@ export default function Login(){
     </div>
   )
 }
-
-
-
-
-
-
-
-
-
-

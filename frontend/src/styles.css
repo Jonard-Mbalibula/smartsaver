@@ -30,4 +30,35 @@ body{ margin:0; font-family: Inter, system-ui, Arial, sans-serif; background:var
 
 
 
+/* --- Add this new rule --- */
+.auth-container {
+  /* Use Flexbox to center content horizontally and vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Ensure it takes up the entire viewport */
+  min-height: 100vh;
+  width: 100%;
+}
 
+/* --- You may also want to style the login form itself --- */
+.login-box {
+  background: var(--panel); /* Use the panel background */
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px; /* Limit the width for a clean look */
+  border: 1px solid #1f2937;
+}
+.login-box h3 {
+  margin-top: 0;
+  color: var(--text);
+  text-align: center;
+}
+/* -------------------------- */
+
+/* Existing .app rule (from your original styles) */
+.app {
+  display: flex;
+  min-height: 100vh;
+}
